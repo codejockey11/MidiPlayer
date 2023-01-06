@@ -1,0 +1,136 @@
+#pragma once
+
+#include "framework.h"
+
+class CControllerNames
+{
+public:
+
+	struct Table
+	{
+		BYTE event;
+		BYTE values;
+
+		const char* name;
+	};
+
+	static const int length = 111;
+
+	const Table eventNameTable[length] =
+	{
+		0x00, 0x01, { "BankSelectMSB       " },
+		0x01, 0x01, { "ModulationWheel     " },
+		0x02, 0x01, { "Breath              " },
+		0x04, 0x01, { "Foot                " },
+		0x05, 0x01, { "PortamentoTime      " },
+		0x06, 0x01, { "DataEntryMSB        " },
+		0x07, 0x01, { "Volume              " },
+		0x08, 0x01, { "Balance             " },
+		0x0A, 0x01, { "Pan                 " },
+		0x0B, 0x01, { "Expression          " },
+		0x0C, 0x01, { "Effectcontrol1      " },
+		0x0D, 0x01, { "Effectcontrol2      " },
+		0x10, 0x01, { "GeneralPurpose1     " },
+		0x11, 0x01, { "GeneralPurpose2     " },
+		0x12, 0x01, { "GeneralPurpose3     " },
+		0x13, 0x01, { "GeneralPurpose4     " },
+		0x20, 0x01, { "BankSelectLSB       " },
+		0x21, 0x01, { "ModulationWheelLSB  " },
+		0x22, 0x01, { "BreathLSB           " },
+		0x24, 0x01, { "FootLSB             " },
+		0x25, 0x01, { "PortamentoTimeLSB   " },
+		0x26, 0x01, { "DataEntryLSB        " },
+		0x27, 0x01, { "VolumeLSB           " },
+		0x28, 0x01, { "BalanceLSB          " },
+		0x2A, 0x01, { "PanLSB              " },
+		0x2B, 0x01, { "ExpressionLSB       " },
+		0x2C, 0x01, { "Effectcontrol1LSB   " },
+		0x2D, 0x01, { "Effectcontrol2LSB   " },
+		0x30, 0x01, { "GeneralPurpose1LSB  " },
+		0x31, 0x01, { "GeneralPurpose2LSB  " },
+		0x32, 0x01, { "GeneralPurpose3LSB  " },
+		0x33, 0x01, { "GeneralPurpose4LSB  " },
+		0x40, 0x01, { "HoldPedal1          " },
+		0x41, 0x01, { "Portamento          " },
+		0x42, 0x01, { "Sostenuto           " },
+		0x43, 0x01, { "SoftPedal           " },
+		0x44, 0x01, { "LegatoPedal         " },
+		0x45, 0x01, { "HoldPedal2          " },
+		0x46, 0x01, { "SoundVariation      " },
+		0x47, 0x01, { "SoundTimbre         " },
+		0x48, 0x01, { "SoundReleaseTime    " },
+		0x49, 0x01, { "SoundAttackTime     " },
+		0x4A, 0x01, { "SoundBrightness     " },
+		0x4B, 0x01, { "SoundControl6       " },
+		0x4C, 0x01, { "SoundControl7       " },
+		0x4D, 0x01, { "SoundControl8       " },
+		0x4E, 0x01, { "SoundControl9       " },
+		0x4F, 0x01, { "SoundControl10      " },
+		0x50, 0x01, { "GPControl5          " },
+		0x51, 0x01, { "GPControl6          " },
+		0x52, 0x01, { "GPControl7          " },
+		0x53, 0x01, { "GPControl8          " },
+		0x54, 0x01, { "PortamentoControl   " },
+		0x5B, 0x01, { "ReverbLevel         " },
+		0x5C, 0x01, { "TremoloDepth        " },
+		0x5D, 0x01, { "ChorusLevel         " },
+		0x5E, 0x01, { "CelesteDepth        " },
+		0x5F, 0x01, { "PhaserDepth         " },
+		0x60, 0x01, { "DataIncrement       " },
+		0x61, 0x01, { "DataDecrement       " },
+		0x62, 0x01, { "NRPNParameterLSB    " },
+		0x63, 0x01, { "NRPNParameterMSB    " },
+		0x64, 0x01, { "RPNParameterLSB     " },
+		0x65, 0x01, { "RPNParameterMSB     " },
+		0x78, 0x01, { "AllSoundOff         " },
+		0x79, 0x01, { "ResetAllControllers " },
+		0x7A, 0x01, { "LocalOnOff          " },
+		0x7B, 0x01, { "AllNotesOff         " },
+		0x7C, 0x01, { "OmniModeOff         " },
+		0x7D, 0x01, { "OmniModeOn          " },
+		0x7E, 0x01, { "MonoModeOn          " },
+		0x7F, 0x01, { "PolyModeOn          " },
+		0x80, 0x02, { "NoteOff C0          " },
+		0x81, 0x02, { "NoteOff C1          " },
+		0x82, 0x02, { "NoteOff C2          " },
+		0x83, 0x02, { "NoteOff C3          " },
+		0x84, 0x02, { "NoteOff C4          " },
+		0x85, 0x02, { "NoteOff C5          " },
+		0x86, 0x02, { "NoteOff C6          " },
+		0x87, 0x02, { "NoteOff C7          " },
+		0x88, 0x02, { "NoteOff C8          " },
+		0x89, 0x02, { "NoteOff C9          " },
+		0x8A, 0x02, { "NoteOff CA          " },
+		0x8B, 0x02, { "NoteOff CB          " },
+		0x8C, 0x02, { "NoteOff CC          " },
+		0x8D, 0x02, { "NoteOff CD          " },
+		0x8E, 0x02, { "NoteOff CE          " },
+		0x8F, 0x02, { "NoteOff CF          " },
+		0x90, 0x02, { "NoteOn C0           " },
+		0x91, 0x02, { "NoteOn C1           " },
+		0x92, 0x02, { "NoteOn C2           " },
+		0x93, 0x02, { "NoteOn C3           " },
+		0x94, 0x02, { "NoteOn C4           " },
+		0x95, 0x02, { "NoteOn C5           " },
+		0x96, 0x02, { "NoteOn C6           " },
+		0x97, 0x02, { "NoteOn C7           " },
+		0x98, 0x02, { "NoteOn C8           " },
+		0x99, 0x02, { "NoteOn C9           " },
+		0x9A, 0x02, { "NoteOn CA           " },
+		0x9B, 0x02, { "NoteOn CB           " },
+		0x9C, 0x02, { "NoteOn CC           " },
+		0x9D, 0x02, { "NoteOn CD           " },
+		0x9E, 0x02, { "NoteOn CE           " },
+		0x9F, 0x02, { "NoteOn CF           " },
+		0xA0, 0x02, { "NoteAftertouch      " },
+		0xB0, 0x02, { "ControllerNumber    " },
+		0xC0, 0x01, { "ProgramChange       " },
+		0xD0, 0x01, { "ControllerAftertouch" },
+		0xE0, 0x02, { "PitchBend           " },
+		0xF0, 0x00, { "SysEx Event         " },
+		0xFF, 0x00, { "Meta                " }
+	};
+
+	const Table* GetName(BYTE s);
+
+};
